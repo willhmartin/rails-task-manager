@@ -1,0 +1,10 @@
+<h1>Here are you tasks</h1>
+<br>
+  <% @tasks.each do |task| %>
+    <p><%= link_to task.title, task_path(task)%></p>
+  <% end %>
+
+<div class="btn btn-primary">
+<%= link_to "Create new task", new_path, :class => "btn" %>
+</div>
+
